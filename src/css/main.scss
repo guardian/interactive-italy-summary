@@ -1,0 +1,53 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+$cl: $gu-red;
+$cr: $gu-blue;
+$m5s: $gu-orange;
+$other: $gu-grey-3;
+
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+
+    .gv-chamber-graphic {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 30px;
+//        background-color: grey;
+
+        .gv-bar {
+            display: inline-block;
+            box-sizing: content-box;
+            margin:0px;
+            float: left;
+            height: 20px;
+            background-color: $other;
+
+
+            &.gv-direct {
+                opacity: 0.6;
+            }
+
+            &.gv-cl {
+                background-color: $cl;
+            }
+
+            &.gv-cr {
+                background-color: $cr;
+            }
+
+            &.gv-m5s {
+                background-color: $m5s;
+            }
+        }
+    }
+}
