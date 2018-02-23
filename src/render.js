@@ -1,12 +1,16 @@
 import templateHTML from "./src/templates/main.html!text"
 import chamberTemplate from "./src/templates/chamberTemplate.html!text"
+import keyTemplate from "./src/templates/key.html!text"
+import partyTable from "./src/templates/partyTable.html!text"
 import axios from 'axios'
 import fs from 'fs'
 import mustache from 'mustache'
 import config from './../config.json'
 
 var partials = {
-	chamber: chamberTemplate
+	chamber: chamberTemplate,
+	key: keyTemplate,
+	partyTable: partyTable
 }
 
 
@@ -22,8 +26,6 @@ function mustachify(input) {
 export async function render() {
 	var data = (await(axios.get(config.docDataUrl))).data.sheets;
 	data.mustacheCopy = mustachify(data.copy);
-	console.log(data.mustacheCopy);
 	var outputhtml = mustache.render(templateHTML,data,partials);
-	console.log(data);
     return outputhtml;
 }

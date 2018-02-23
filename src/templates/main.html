@@ -1,4 +1,8 @@
 <div class="gv-interactive">
+    <div class="gv-main-title"><h2>{{mustacheCopy.firstHeading}}</h2></div>
+    <div class="gv-progress gv-subhead">{{mustacheCopy.countProgress}}</div>
+    {{ > key }}
+    <div class="gv-pure-shame"></div>
     <div class="gv-house gv-chamber">
         <h4>{{mustacheCopy.camera}}</h4>
             <div class="gv-chamber-graphic">
@@ -18,6 +22,9 @@
 {{/senateSeats}}
 </div>
     </div>
+
+    <div class="gv-gloss">{{mustacheCopy.intro}}</div>
+
+    {{ > partyTable }}
 </div>
 
-content
