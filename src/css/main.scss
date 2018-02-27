@@ -240,3 +240,139 @@ height: 100%;
     }
 
 }
+
+.content--interactive .content__headline, .headline {
+  font-size: 32px;
+  line-height: 35.2px;
+  font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+  font-weight: 700;
+  @include mq(leftCol) {
+    font-size: 50px;
+    line-height: 54px;
+  }
+}
+
+.headline {
+  font-family: "Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+}
+
+.content__standfirst, .standfirst {
+
+  font-weight: 200;
+  line-height: 25px;
+  font-size: 22px;
+  max-width: 280px;
+  @include mq(leftCol) {
+    max-width: 460px;
+  }
+}
+
+.content__main, .content__head {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+    min-height: 500px;
+    content: ' ';
+
+
+    border-left:1px solid #dfdfdf;
+
+    @include mq(leftCol) {
+      left: calc((100% - 1140px)/2 + 170px);
+    }
+
+    @include mq(wide) {
+      left: calc((100% - 1300px)/2 + 250px);
+    }
+  }
+}
+
+a, .u-fauxlink {
+    color: #c70000;
+    cursor: pointer;
+    text-decoration: none;
+}
+.tonal--tone-news .tone-colour{
+      color: #c70000;
+}
+
+.content__meta-container{
+  background-image: repeating-linear-gradient(to bottom, #dcdcdc, #dcdcdc 0.0625rem, transparent 0.0625rem, transparent 0.25rem);
+  background-repeat: repeat-x;
+  background-position: top;
+  -webkit-background-size: 0.0625rem 0.8125rem;
+  background-size: 0.0625rem 0.8125rem;
+  padding-top: 12px;
+  border-top: none;
+}
+.content__main-column--interactive {
+    & > p, & > h2,& > ul,  .element-interactive,.element-atom {
+        max-width: 620px;
+
+        @include mq(leftCol) {
+            margin-left: 160px !important;
+        }
+        @include mq(wide) {
+            margin-left: 240px !important;
+        }
+    }
+
+    & > h2 {
+    	font-family: "Guardian Egyptian Web", Georgia;
+    	font-size: 36px;
+    	line-height: 42px;
+    	font-weight: 700;
+    	color: #333;
+    	margin-top: 36px;
+    	margin-bottom: 6px;
+    }
+
+    .element--immersive {
+    	max-width: initial;
+    	margin-left: 0 !important;
+        margin-bottom: 36px !important;
+    }
+
+    .element--showcase {
+
+      max-width: 860px;
+
+    }
+
+
+}
+
+.content__main-column--interactive blockquote, .prose blockquote {
+  font-style: normal;
+  margin: 0 0 10px 10px;
+  float: right;
+  width: 40%;
+  border-top: 4px solid #000;
+  background: #fff;
+  padding: 10px 0;
+  font-family: 'Guardian Text Sans Web', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 13px;
+  line-height:18px;
+
+  @include mq(leftCol) {
+      width: 150px;
+      float: left;
+      margin: 0;
+  }
+  @include mq(wide) {
+      width: 230px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+.prose blockquote.quoted::before {
+  display: none;
+}
