@@ -9,7 +9,9 @@
 {{#chamberSeats}}
 {{ > chamber }}
 {{/chamberSeats}}
-</div>    
+</div>
+<div class="gv-halfway-marker">|</div>    
+<div class="gv-halfway-marker-label">50% of seats</div>    
 </div>
 
 
@@ -21,10 +23,14 @@
 {{ > chamber }}
 {{/senateSeats}}
 </div>
+<div class="gv-halfway-marker">|</div>    
+<div class="gv-halfway-marker-label">50% of seats</div>    
+
     </div>
 
     <div class="gv-gloss">{{mustacheCopy.intro}}</div>
 
     {{ > partyTable }}
+    {{ > analysis}}
 </div>
 

@@ -2,6 +2,8 @@ import templateHTML from "./src/templates/main.html!text"
 import chamberTemplate from "./src/templates/chamberTemplate.html!text"
 import keyTemplate from "./src/templates/key.html!text"
 import partyTable from "./src/templates/partyTable.html!text"
+import analysis from "./src/templates/analysis.html!text"
+
 import axios from 'axios'
 import fs from 'fs'
 import mustache from 'mustache'
@@ -10,7 +12,8 @@ import config from './../config.json'
 var partials = {
 	chamber: chamberTemplate,
 	key: keyTemplate,
-	partyTable: partyTable
+	partyTable: partyTable,
+	analysis : analysis
 }
 
 
