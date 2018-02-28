@@ -9,6 +9,17 @@ import fs from 'fs'
 import mustache from 'mustache'
 import config from './../config.json'
 
+import AWS from 'aws-sdk'
+
+var s3 = new AWS.S3();
+    var s3params = {
+        ACL: "public-read",
+        Body: 'test',
+        Bucket: "gdn-cdn/2018/03/embed/italy",
+        Key: 'widget.html',
+        ContentType: "text/html"
+    };
+
 var partials = {
 	chamber: chamberTemplate,
 	key: keyTemplate,
@@ -30,5 +41,9 @@ export async function render() {
 	var data = (await(axios.get(config.docDataUrl))).data.sheets;
 	data.mustacheCopy = mustachify(data.copy);
 	var outputhtml = mustache.render(templateHTML,data,partials);
+	s3.putObject(s3params, function(err, data) {
+		if (err) console.log(err, err.stack); 
+		else     console.log(data);
+	});
     return outputhtml;
 }

@@ -47,6 +47,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.203.0",
     "axios": "^0.18.0",
     "gulp-rename": "^1.2.2",
     "mustache": "^2.3.0",
