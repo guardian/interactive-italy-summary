@@ -29,14 +29,42 @@ $leu: $gu-darkred;
         padding-top: 0px;
     }
 
+    .gv-key {
+      margin-bottom: 10px;
+    }
+
+    .gv-blob-group {
+      @include mq($until: tablet) {
+        width: 30%;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      display: inline;
+    }
 
     .gv-blob-wrapper,.gv-label-wrapper,.gv-party {
         display: inline-block;
+            vertical-align: middle;
       }
-      
+
+      .gv-label-wrapper {
+        &:first-of-type {
+          @include mq($until: tablet) {
+            width: calc(100% - 10px);
+          }
+        }
+      }
+
+      .gv-blob-wrapper {
+        margin-left: 2px;
+      }
+
       .gv-party {
-        vertical-align: 0.7em;
+        vertical-align: middle;
+        min-width: 75px;
+        max-width: 76px;
         @include fs-textSans(3);
+        line-height: 14px;
       }
 
     .gv-pure-shame {
@@ -58,6 +86,8 @@ $leu: $gu-darkred;
         margin-right: 3px;
         border-radius: 3px;
         background-color: $gu-grey-3;
+
+
         &.gv-cl {
             background-color: $cl;
         }
@@ -70,7 +100,7 @@ $leu: $gu-darkred;
             background-color: $m5s;
         }
 
-           
+
         &.gv-leu {
             background-color: $leu;
         }
@@ -95,36 +125,46 @@ $leu: $gu-darkred;
     }
 
     .gv-blob-wrapper {
-    
+        vertical-align: middle;
+
         .gv-blob {
             background-color: $other;
-            border-radius: 2px;
-            height: 0.5em;
-            width: 0.5em;
-    
+
+            height: 12px;
+            width: 24px;
+
+            &.gv-blob-top {
+              border-top-left-radius: 15px;
+              border-top-right-radius: 15px;
+            }
+            &.gv-blob-bottom {
+              border-bottom-left-radius: 15px;
+              border-bottom-right-radius: 15px;
+            }
+
             &.gv-direct {
                 opacity: 0.6;
             }
-    
+
             &.gv-cl {
                 background-color: $cl;
             }
-    
+
             &.gv-cr {
                 background-color: $cr;
             }
-    
+
             &.gv-m5s {
                 background-color: $m5s;
             }
 
-               
+
             &.gv-leu {
                 background-color: $leu;
             }
 
         }
-    
+
     }
 
     .gv-subhead {
@@ -136,8 +176,15 @@ $leu: $gu-darkred;
     }
 
     .gv-label {
-        @include fs-textSans(1); 
-        font-size : 11px;   
+        @include fs-textSans(1);
+        padding-right: 5px;
+        font-weight: bold;
+        &:first-of-type {
+          border-bottom: 1px solid #dfdfdf;
+        }
+        @include mq($until: tablet) {
+          width: 100%;
+        }
     }
     .gv-label-top {
         vertical-align: top;
