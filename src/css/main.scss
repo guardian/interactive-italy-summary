@@ -51,6 +51,31 @@ $leu: $gu-darkred;
         @include fs-textSans(3);
     }
 
+    .gv-party-blob {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin-right: 3px;
+        border-radius: 3px;
+        background-color: $gu-grey-3;
+        &.gv-cl {
+            background-color: $cl;
+        }
+
+        &.gv-cr {
+            background-color: $cr;
+        }
+
+        &.gv-m5s {
+            background-color: $m5s;
+        }
+
+           
+        &.gv-leu {
+            background-color: $leu;
+        }
+
+    }
 
 
 
@@ -74,8 +99,8 @@ $leu: $gu-darkred;
         .gv-blob {
             background-color: $other;
             border-radius: 2px;
-            height: 1em;
-            width: 1em;
+            height: 0.5em;
+            width: 0.5em;
     
             &.gv-direct {
                 opacity: 0.6;
@@ -111,7 +136,8 @@ $leu: $gu-darkred;
     }
 
     .gv-label {
-        @include fs-textSans(1);    
+        @include fs-textSans(1); 
+        font-size : 11px;   
     }
     .gv-label-top {
         vertical-align: top;
