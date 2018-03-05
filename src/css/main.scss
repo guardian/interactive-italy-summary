@@ -191,7 +191,9 @@ $leu: $gu-darkred;
     .gv-label-top {
         vertical-align: top;
     }
-
+.gv-seat-count {
+    color: $gu-grey-2;
+}
 
     .gv-halfway-marker {
         position: relative;
@@ -225,6 +227,15 @@ $leu: $gu-darkred;
     //     }
     // }
 
+
+    .gv-seats-total {
+        position:absolute;
+        color:black;
+        transform: translateY(-36px);
+        @include fs-textSans(2);
+        font-weight:bold;
+        padding-left:2px;
+    }
 
     .gv-chamber-graphic {
         margin-bottom: 20px;

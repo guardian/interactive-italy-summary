@@ -148,7 +148,7 @@ gulp.task('build:js', ['build:js.main', 'build:js.app']);
 gulp.task('build:html', cb => {
     try {
         let render = requireUncached('./src/render.js').render;
-
+// get an array back from render and do the next bit for each of the elements
         Promise.resolve(render()).then(html => {
             file('main.html', html, {
                     'src': true

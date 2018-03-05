@@ -4,25 +4,28 @@
     {{ > key }}
     <div class="gv-pure-shame"></div>
     <div class="gv-house gv-chamber">
-        <h4>{{mustacheCopy.camera}}</h4>
+        <h4>{{mustacheCopy.camera}}<span class="gv-seat-count"> {{mustacheCopy.cameraSeatCount}}</span></h4>
             <div class="gv-chamber-graphic">
 {{#chamberSeats}}
 {{ > chamber }}
 {{/chamberSeats}}
 </div>
+<div class="gv-totals">{{#chamberSeats}}<span class="gv-seats-total gv-{{coalition}}" style="left:{{left}}%">{{#showTotal}}{{seatsTotal}}{{/showTotal}}</span>{{/chamberSeats}}</div>
 <div class="gv-halfway-marker">|</div>    
 <div class="gv-halfway-marker-label">50% of seats</div>    
 </div>
 
 
     <div class="gv-house gv-senate">
-        <h4>{{mustacheCopy.senato}}</h4>
+        <h4>{{mustacheCopy.senato}} <span class="gv-seat-count">{{mustacheCopy.senateSeatCount}}</span></h4>
             <div class="gv-chamber-graphic">
 
 {{#senateSeats}}
 {{ > chamber }}
 {{/senateSeats}}
 </div>
+<div class="gv-totals">{{#senateSeats}}<span class="gv-seats-total gv-{{coalition}}" style="left:{{left}}%">{{#showTotal}}{{seatsTotal}}{{/showTotal}}</span>{{/senateSeats}}</div>
+
 <div class="gv-halfway-marker">|</div>    
 <div class="gv-halfway-marker-label">50% of seats</div>    
 
